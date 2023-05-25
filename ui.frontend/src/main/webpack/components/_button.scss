@@ -1,8 +1,12 @@
+@import '../base/sass/mixins'; 
+
+
 .cmp-button {
     display: inline-block;
     margin-bottom: 0; // For input.btn
-    font-weight: $btn-font-weight-bold;
-    letter-spacing: 2.8px;
+    // font-weight: $btn-font-weight-bold;
+    // letter-spacing: 2.8px;
+    @include button-mixin();
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;

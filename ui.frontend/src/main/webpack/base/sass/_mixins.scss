@@ -1,0 +1,97 @@
+// mixins for headings
+
+// @include font-family("Roboto-Light");
+// @include font-family("Roboto-Regular");
+// @include font-family("Robot-Medium");
+
+@mixin RobotoLight{
+  font-family: 'Roboto-Light', sans-serif;
+}
+
+@mixin RobotoRegular{
+  font-family: 'Roboto-Regular', sans-serif;
+}
+
+@mixin RobotoMedium{
+  font-family: 'Roboto-Medium', sans-serif;
+}
+
+@mixin h1-mixin() {
+  @include RobotoLight();
+  font-weight: 400;
+  font-size: 6rem;
+  letter-spacing: -1.5px;
+}
+
+@mixin h2-mixin() {
+  @include RobotoLight();
+  font-weight: 400;
+  font-size: 3.75rem;
+  letter-spacing: -0.5px;
+}
+
+@mixin h3-mixin() {
+    @include RobotoRegular();
+    font-weight: 500;
+    font-size: 3rem;
+    letter-spacing: 0px;
+  }
+
+  @mixin h4-mixin() {
+    @include RobotoRegular();
+    font-weight: 500;
+    font-size: 2.125rem;
+    letter-spacing: 0.25px;
+  }
+
+  @mixin h5-mixin(){
+    @include RobotoRegular();
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: 0px;
+  }
+
+  @mixin h6-mixin(){
+    @include RobotoMedium(); 
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: 0px;
+  }
+
+  @mixin subtitle1-mixin(){
+    @include RobotoRegular();
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.5px; 
+  }
+
+  @mixin subtitle2-mixin(){
+    @include RobotoMedium(); 
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.1px; 
+  }
+
+  @mixin button-mixin(){
+    @include RobotoMedium(); 
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 1.25px; 
+    text-transform: uppercase;
+  }
+
+  @mixin caption-mixin(){
+    @include RobotoRegular();
+    font-weight: 500;
+    font-size: 0.75rem;
+    letter-spacing: 0.4px; 
+  }
+
+  @mixin overline-mixin(){
+    @include RobotoMedium(); 
+    font-weight: 500;
+    font-size: 0.625rem;
+    letter-spacing: 1.5px; 
+    text-transform: uppercase;
+  }
+

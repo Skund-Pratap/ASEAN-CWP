@@ -1,4 +1,4 @@
-
+@import '../mixins';
 //== XF Header style, used on page template
 header.experiencefragment {
 
@@ -41,6 +41,7 @@ header.experiencefragment {
         margin: 0;
         padding: 0;
         list-style: none;
+        @include button-mixin();
     }
     .cmp-navigation__item--level-0 {
         display: grid;
