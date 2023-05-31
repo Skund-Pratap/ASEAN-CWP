@@ -1,4 +1,5 @@
 @import "../base/sass/mixins";
+@import "../base/sass/variables"; 
 
 .cmp-teaser {
 }
@@ -207,6 +208,7 @@
     &-h1 {
       .cmp-teaser__title {
         @include h1-mixin();
+        color: $tertiary-yellow;
       }
     }
     &-h2 {

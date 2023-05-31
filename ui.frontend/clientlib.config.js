@@ -14,80 +14,47 @@
  ~ limitations under the License.
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-const path = require('path');
+const path = require("path");
+const getEntrypoints = require("../ui.frontend/utils/entrypoint");
 
-const BUILD_DIR = path.join(__dirname, 'dist');
+const BUILD_DIR = path.join(__dirname, "build");
 const CLIENTLIB_DIR = path.join(
   __dirname,
-  '..',
-  'ui.apps',
-  'src',
-  'main',
-  'content',
-  'jcr_root',
-  'apps',
-  'wknd-muzik',
-  'clientlibs'
+  "..",
+  "ui.apps",
+  "src",
+  "main",
+  "content",
+  "jcr_root",
+  "apps",
+  "wknd-muzik",
+  "clientlibs"
 );
+const ASSET_MANIFEST_PATH = path.join(BUILD_DIR, "asset-manifest.json");
 
-const libsBaseConfig = {
-  allowProxy: true,
-  serializationFormat: 'xml',
-  cssProcessor: ['default:none', 'min:none'],
-  jsProcessor: ['default:none', 'min:none']
-};
+const entrypoints = getEntrypoints(ASSET_MANIFEST_PATH);
 
 // Config for `aem-clientlib-generator`
 module.exports = {
   context: BUILD_DIR,
   clientLibRoot: CLIENTLIB_DIR,
-  libs: [
-    {
-      ...libsBaseConfig,
-      name: 'clientlib-dependencies',
-      categories: ['wknd-muzik.dependencies'],
-      assets: {
-        // Copy entrypoint scripts and stylesheets into the respective ClientLib
-        // directories
-        js: {
-          cwd: 'clientlib-dependencies',
-          files: ['**/*.js'],
-          flatten: false
-        },
-        css: {
-          cwd: 'clientlib-dependencies',
-          files: ['**/*.css'],
-          flatten: false
-        }
-      }
-    },
-    {
-      ...libsBaseConfig,
-      name: 'clientlib-site',
-      categories: ['wknd-muzik.site'],
-      dependencies: ['wknd-muzik.dependencies'],
-      assets: {
-        // Copy entrypoint scripts and stylesheets into the respective ClientLib
-        // directories
-        js: {
-          cwd: 'clientlib-site',
-          files: ['**/*.js'],
-          flatten: false
-        },
-        css: {
-          cwd: 'clientlib-site',
-          files: ['**/*.css'],
-          flatten: false
-        },
+  libs: {
+    name: "clientlib-react",
+    allowProxy: true,
+    categories: ["wknd-muzik.react"],
+    serializationFormat: "xml",
+    cssProcessor: ["default:none", "min:none"],
+    jsProcessor: ["default:none", "min:none"],
+    assets: {
+      js: entrypoints.filter((fileName) => fileName.endsWith(".js")),
+      css: entrypoints.filter((fileName) => fileName.endsWith(".css")),
 
-        // Copy all other files into the `resources` ClientLib directory
-        resources: {
-          cwd: 'clientlib-site',
-          files: ['**/*.*'],
-          flatten: false,
-          ignore: ['**/*.js', '**/*.css']
-        }
-      }
-    }
-  ]
+      resources: {
+        cwd: ".",
+        files: ["**/*.*"],
+        flatten: false,
+        ignore: entrypoints,
+      },
+    },
+  },
 };

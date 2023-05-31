@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/etc.clientlibs/wknd-muzik/clientlibs/clientlib-react/resources/static/css/main.d98d2970.chunk.css",
+    "main.js": "/etc.clientlibs/wknd-muzik/clientlibs/clientlib-react/resources/static/js/main.114baf03.chunk.js",
+    "main.js.map": "/etc.clientlibs/wknd-muzik/clientlibs/clientlib-react/resources/static/js/main.114baf03.chunk.js.map",
+    "runtime-main.js": "/etc.clientlibs/wknd-muzik/clientlibs/clientlib-react/resources/static/js/runtime-main.c34dd857.js",
+    "runtime-main.js.map": "/etc.clientlibs/wknd-muzik/clientlibs/clientlib-react/resources/static/js/runtime-main.c34dd857.js.map",
+    "static/js/2.26e227b1.chunk.js": "/etc.clientlibs/wknd-muzik/clientlibs/clientlib-react/resources/static/js/2.26e227b1.chunk.js",
+    "static/js/2.26e227b1.chunk.js.map": "/etc.clientlibs/wknd-muzik/clientlibs/clientlib-react/resources/static/js/2.26e227b1.chunk.js.map",
+    "index.html": "/etc.clientlibs/wknd-muzik/clientlibs/clientlib-react/resources/index.html",
+    "precache-manifest.ad087487ddb1ff7b20257161fb7d669c.js": "/etc.clientlibs/wknd-muzik/clientlibs/clientlib-react/resources/precache-manifest.ad087487ddb1ff7b20257161fb7d669c.js",
+    "service-worker.js": "/etc.clientlibs/wknd-muzik/clientlibs/clientlib-react/resources/service-worker.js",
+    "static/css/main.d98d2970.chunk.css.map": "/etc.clientlibs/wknd-muzik/clientlibs/clientlib-react/resources/static/css/main.d98d2970.chunk.css.map",
+    "static/js/2.26e227b1.chunk.js.LICENSE.txt": "/etc.clientlibs/wknd-muzik/clientlibs/clientlib-react/resources/static/js/2.26e227b1.chunk.js.LICENSE.txt",
+    "static/media/icon-back.svg": "/etc.clientlibs/wknd-muzik/clientlibs/clientlib-react/resources/static/media/icon-back.19a5bdab.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c34dd857.js",
+    "static/js/2.26e227b1.chunk.js",
+    "static/css/main.d98d2970.chunk.css",
+    "static/js/main.114baf03.chunk.js"
+  ]
+}
