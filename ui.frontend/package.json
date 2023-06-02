@@ -7,19 +7,39 @@
     "url": "https://github.com/adobe/aem-project-archetype"
   },
   "private": true,
+  "proxy": "http://localhost:4502",
   "main": "src/main/webpack/site/main.ts",
   "license": "SEE LICENSE IN LICENSE.txt",
   "scripts": {
     "dev": "webpack -d --env dev --config ./webpack.dev.js && clientlib --verbose",
     "prod": "webpack -p --config ./webpack.prod.js && clientlib --verbose",
-    "start": "webpack-dev-server --open --config ./webpack.dev.js",
     "sync": "aemsync -d -p ../ui.apps/src/main/content",
-    "watch": "webpack-dev-server --config ./webpack.dev.js --env.writeToDisk & watch 'clientlib' ./dist & aemsync -t \"http://${AEMUSER:-admin}:${AEMPASS:-admin}@${HOST:-localhost}:${PORT:-4502}\" -w ../ui.apps/src/main/content"
+    "watch": "webpack-dev-server --config ./webpack.dev.js --env.writeToDisk & watch 'clientlib' ./dist & aemsync -t \"http://${AEMUSER:-admin}:${AEMPASS:-admin}@${HOST:-localhost}:${PORT:-4502}\" -w ../ui.apps/src/main/content",
+    "start": "react-scripts start",
+    "build": "react-scripts build && clientlib --verbose"
+  },
+  "dependencies": {
+    "@adobe/cq-react-editable-components": "~1.1.0",
+    "@adobe/cq-spa-component-mapping": "~1.0.3",
+    "@adobe/cq-spa-page-model-manager": "~1.0.7",
+    "clone": "^2.1.2",
+    "custom-event-polyfill": "^1.0.7",
+    "dompurify": "^1.0.11",
+    "history": "^4.7.2",
+    "react": "^16.6.3",
+    "react-app-polyfill": "^1.0.4",
+    "react-dom": "^16.6.3",
+    "react-fast-compare": "^2.0.2",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "~3.2.0",
+    "react-test-renderer": "^16.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.3.3",
     "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "@typescript-eslint/eslint-plugin": "^2.14.0",
     "@typescript-eslint/parser": "^2.14.0",
     "acorn": "^6.1.0",
@@ -51,10 +71,17 @@
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.9.0",
     "webpack-import-glob-loader": "^1.6.3",
-    "webpack-merge": "^4.2.1"
+    "webpack-merge": "^4.2.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "node-fetch": "^2.6.0",
+    "sinon": "^7.3.2"
   },
   "browserslist": [
     "last 2 version",
     "> 1%"
-  ]
+  ],
+  "eslintConfig": {
+    "extends": "react-app"
+  }
 }
