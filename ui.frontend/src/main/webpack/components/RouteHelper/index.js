@@ -17,7 +17,7 @@
  export const withRoute = (WrappedComponent, extension) => {
    return class CompositeRoute extends Component {
      render() {
-       let routePath = this.props.cqPath;
+       const routePath = this.props.cqPath;
        if (!routePath) {
          return <WrappedComponent {...this.props} />;
        }

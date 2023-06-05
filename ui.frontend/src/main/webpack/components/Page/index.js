@@ -12,7 +12,7 @@
   // For now, the rendering is the same as the RootPage; this is more for illustration purposes
   class AppPage extends Page {
     get containerProps() {
-      let attrs = super.containerProps;
+      const attrs = super.containerProps;
       attrs.className =
         (attrs.className || '') + ' page ' + (this.props.cssClassNames || '');
       return attrs;

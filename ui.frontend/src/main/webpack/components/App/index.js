@@ -1,7 +1,7 @@
 import { Page, withModel } from '@adobe/cq-react-editable-components';
  import React from 'react';
  import Text from '../Text/index';
- import Header from '../Header/Header'
+ import Header from '../Header/Header';
  
  require('./App.css');
  
