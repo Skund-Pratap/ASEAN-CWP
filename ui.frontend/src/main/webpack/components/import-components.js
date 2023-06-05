@@ -1,5 +1,5 @@
 import './Page'; 
-import './InterestingContent'; 
+import './InterestingContent/InterestingContent'; 
 import './BasicComponent'; 
-import './Text';
+import '../components/Text/index';
 
