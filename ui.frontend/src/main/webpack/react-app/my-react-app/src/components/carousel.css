@@ -1,0 +1,70 @@
+.carousel-item {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        position:relative; 
+
+        
+
+.carousel-content {
+    flex: 1;
+    display: flex; 
+    flex-direction: column;
+    justify-content:flex-start; 
+    .carousel-title{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 44px;
+        line-height: 50px;
+        color: #000000;
+    }
+    .carousel-description{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 26px;
+        color: #585E6C;
+    }
+    .button-container button{
+        background-color: black; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 25px;
+        border-radius: 10px;
+        text-transform: captialize !important;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    
+}
+
+.carousel-image {
+    flex: 0 0 50%;
+  }
+
+.carousel-image img{
+    max-width: 100%;
+}
+
+}
+
+
+.slick-dots{
+    display:flex !important;
+    bottom: 10px !important
+    /* Additional styles for the dots */
+  }
+
+
