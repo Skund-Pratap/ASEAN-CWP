@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import TextComponent from './aemComponent1';
 import CarouselComponent from './carouselComponent';
+import HeaderComponent from './headerComponent';
+import MainPage from './mainPage/mainPage'; 
+import Footer from './Footer/footer';
 import data from './data';
 
 export default function MyReactComponent() {
@@ -72,8 +75,11 @@ export default function MyReactComponent() {
 
   return (
     <div>
+      <HeaderComponent/>
       <CarouselComponent />
-      {console.log('AEM DATA is \n', objectsWithText)}
+      <MainPage/>
+      <Footer/>
+      {/* {console.log('AEM DATA is \n', )} */}
       {/* {objectsWithText.length > 0 ? (
         objectsWithText.map(obj => <TextComponent key={obj.id} data={obj} />)
       ) : (

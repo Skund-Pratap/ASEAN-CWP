@@ -1,0 +1,120 @@
+/* Footer.css */
+
+footer {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+}
+
+.column {
+  color: #333;
+}
+
+.column h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  letter-spacing: 0.75px;
+
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.column ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column ul li {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.column a {
+  color: #333;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer-line {
+  height: 1px;
+  width: 100%;
+  background-color: lightgray;
+  margin: 20px 0 auto;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer-line {
+  height: 1px;
+  width: 90%;
+  background-color: lightgrey;
+  margin: 20px auto; /* Adjust the margin as needed */
+}
+
+/* CSS for mobile view */
+@media (max-width: 600px) {
+  .footer-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column {
+    text-align: center;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .footer-line {
+    height: 1px;
+    width: 90%;
+    background-color: lightgrey;
+    margin: 20px auto; /* Adjust the margin as needed */
+  }
+
+  .follow-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .follow-icons i {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+  }
+}

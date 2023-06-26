@@ -1,0 +1,136 @@
+.Header {
+  position: relative;
+  top: 0;
+  max-height: 70px;
+  width: 100vw;
+  display: grid;
+  grid-template-areas: "logo nav";
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 2; /* Ensure the header is on top */
+  /* margin-bottom: 20px; */
+}
+
+.Logo {
+  grid-area: logo;
+  height: 70px;
+}
+
+.Nav {
+  display: flex; /* Updated: Use flexbox */
+  align-items: center;
+  justify-content: space-evenly; /* Updated: Distribute items evenly */
+  z-index: 1; /* Ensure the navigation is below the hamburger menu */
+}
+
+.Nav a {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.75px;
+  color: #1B1D21;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+.Nav a:hover {
+  transform: scale(1.0);
+}
+
+.Nav button {
+  display: flex; /* Updated: Use flexbox */
+  align-items: center;
+  padding: 10px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  background-color: rgba(255, 0, 0, 0.5);
+  box-shadow: 0px 5px 0px 0px rgba(255, 0, 0, 0.25);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 70ms;
+}
+
+.Nav button:active {
+  transform: translateY(3px);
+  box-shadow: 0px 2px 0px 0px rgba(255, 0, 0, 0.25);
+}
+
+.Burger {
+  display: none;
+  grid-area: burger;
+  margin: 0 20px 0 0;
+  padding: 0;
+  justify-self: end;
+  font-size: 40px;
+  border: none;
+  background: none;
+  outline: none;
+  transition: 0.1s;
+  z-index: 3; /* Ensure the hamburger menu is on top */
+}
+
+.Burger:active {
+  transform: scale(1);
+}
+
+/* Rest of the CSS remains the same */
+
+@media (max-width: 700px) {
+  .Header {
+    grid-template-areas: "logo burger" "nav nav";
+    margin-bottom: 0;
+  }
+  
+  .Logo {
+    grid-area: logo;
+    height: 45px;
+  }
+
+  .Nav {
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: none;
+    grid-row-gap: 20px;
+    padding: 30px 0 30px;
+    /* background: rgba(40, 44, 47, 0.95); */
+    background: aliceblue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 2; /* Ensure the navigation is on top */
+    flex-direction: column !important;
+    
+
+  }
+
+  .Burger {
+    display: inline;
+    font-size: 30px;
+  }
+}
+
+
+.NavAnimation-enter {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.NavAnimation-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 350ms, transform 350ms;
+}
+
+.NavAnimation-exit {
+  opacity: 1;
+}
+
+.NavAnimation-exit-active {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 350ms, transform 350ms;
+}

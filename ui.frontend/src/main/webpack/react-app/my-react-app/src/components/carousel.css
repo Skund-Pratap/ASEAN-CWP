@@ -6,7 +6,6 @@
   overflow: hidden !important;
   flex-direction: row;
   gap: 25px;
-  @me
 }
 
 .carousel-content {
@@ -288,6 +287,24 @@
   }
 }
 
+
+@media (min-width: 1920px){
+  .carousel-navigation {
+    position: relative;
+    bottom: 40px;
+    left: 20%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+.carousel-image-container {
+  width: 100%;
+  max-width: 1000px;
+  height: 700px;
+}
+}
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
   .carousel-content {

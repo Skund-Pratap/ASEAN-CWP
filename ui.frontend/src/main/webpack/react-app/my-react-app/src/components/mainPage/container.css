@@ -1,0 +1,136 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 60px;
+}
+
+.teaser {
+  flex: 1 1 100%;
+}
+
+h2 {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 60px;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 48px;
+  letter-spacing: 0;
+}
+
+p {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.title {
+  flex: 1 1 100%;
+}
+
+.list {
+  flex: 1 1 100%;
+}
+
+.list ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.list li {
+  flex: 0 0 calc(25% - 10px);
+  flex-basis: calc(25% - 10px);
+  height: auto;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 30px rgba(16, 51, 30, 0.1);
+  border-radius: 10px;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+
+.list li:hover {
+  background: #FFFFFF;
+  border: 3px solid #B62D2E;
+  box-shadow: 0px 10px 30px #FBD1D1;
+  border-radius: 10px;
+  transform: translateY(-5px);
+}
+
+.list a {
+  text-decoration: none;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: #4B595F;
+}
+
+/* Mobile devices */
+@media screen and (max-width: 400px) {
+  .container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .list li {
+    flex-basis: calc(50% - 10px);
+  }
+}
+
+/* Tablet devices */
+@media screen and (min-width: 401px) and (max-width: 767px) {
+  .container {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+/* Desktop devices */
+@media screen and (min-width: 768px) and (max-width: 1920px) {
+  .container {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .list li {
+    flex-basis: calc(33.33% - 10px);
+  }
+}
+
+/* Desktop Large devices */
+@media screen and (min-width: 1921px) and (max-width: 2130px) {
+  .container {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+}
+
+/* Desktop Extra Large devices */
+@media screen and (min-width: 2131px) {
+  .container {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
