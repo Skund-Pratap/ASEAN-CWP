@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TextComponent from './aemComponent1';
 import CarouselComponent from './carouselComponent';
-import HeaderComponent from './headerComponent';
+import Main from './headerComponent';
 import MainPage from './mainPage/mainPage'; 
 import Footer from './Footer/footer';
 import data from './data';
@@ -75,9 +75,11 @@ export default function MyReactComponent() {
 
   return (
     <div>
-      <HeaderComponent/>
+      <Main/>
+      <div className=''>
       <CarouselComponent />
       <MainPage/>
+      </div>
       <Footer/>
       {/* {console.log('AEM DATA is \n', )} */}
       {/* {objectsWithText.length > 0 ? (

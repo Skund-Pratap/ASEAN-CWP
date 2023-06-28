@@ -44,12 +44,12 @@
   align-items: center;
   padding: 10px;
   outline: none;
-  border: none;
+  border: 2px solid black;
   font-size: 20px;
-  color: #fff;
+  color: black;
   font-weight: 600;
-  background-color: rgba(255, 0, 0, 0.5);
-  box-shadow: 0px 5px 0px 0px rgba(255, 0, 0, 0.25);
+  background-color: white;
+  box-shadow: none;
   border-radius: 10px;
   cursor: pointer;
   transition: 70ms;
@@ -91,10 +91,36 @@
     height: 45px;
   }
 
+  .Nav a{
+    color: white;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: right;
+    margin-right: 15px;
+    font-family: 'Roboto';
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+
+  .Nav button {
+    color: white; /* Change text color to white */
+    border: 2px solid white; /* Change border color to white */
+    margin-right: 20px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+
+  }
   .Nav {
     grid-template-rows: repeat(4, auto);
     grid-template-columns: none;
-    grid-row-gap: 20px;
+    grid-row-gap: 10px;
     padding: 30px 0 30px;
     /* background: rgba(40, 44, 47, 0.95); */
     background: aliceblue;
@@ -103,6 +129,18 @@
     border-bottom-right-radius: 10px;
     z-index: 2; /* Ensure the navigation is on top */
     flex-direction: column !important;
+    /* flex-direction: column;
+    align-items: flex-end; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: flex-end;
+    /* justify-content: center; */
+    width: 100vw;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    padding-top: 40px;
+    background: rgba(0, 0, 0, 0.8);
     
 
   }
@@ -134,3 +172,4 @@
   transform: scale(0.5);
   transition: opacity 350ms, transform 350ms;
 }
+

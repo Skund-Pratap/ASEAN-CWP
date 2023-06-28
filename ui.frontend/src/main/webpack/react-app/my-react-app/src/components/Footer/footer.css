@@ -16,7 +16,7 @@ footer {
 }
 
 .column h3 {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -36,7 +36,7 @@ footer {
 }
 
 .column ul li {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
