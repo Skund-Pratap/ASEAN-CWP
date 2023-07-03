@@ -15,11 +15,10 @@ const HeaderComponent = () => {
           <div className="menu-button"></div>
         </label>
         <ul className="menu">
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-          <li>Four</li>
-          <li>Five</li>
+          <li>Memeberships</li>
+          <li>Shows</li>
+          <li>Blog</li>
+          <li>Contact</li>
         </ul>
       </section>
     </>
